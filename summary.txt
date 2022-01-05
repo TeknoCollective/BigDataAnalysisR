@@ -1,0 +1,8 @@
+summary
+
+Here the dataCollection.R sctipt used for data collection from Twitter as a data source and after collected the data we inserted into the mongodb.
+After that source function invoke the dtanalysis.R script.in the dtanalysis.R script we collected the raw data from mongo db and load into the spark memory 
+as it is bigdata and then select only text coloum from the twitter raw data. here we used tm package to use for removing all puntuation,stopword and other 
+data cleaning task. after that we use lexicon package called "syuzhet" for sentiment analysis.(here need to describe how lexicon based algorith work). after 
+analysis tweet text data we put our result into the new mongodb collection for the visualization pupose and disconnect the spark connection and called the source function for the dt.visualize.R
+script. in the dtvisualize.R script load three countries visualization data and display them into the shiny app.  
